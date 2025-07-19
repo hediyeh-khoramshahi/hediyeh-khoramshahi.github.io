@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+<!--[if lt IE 9 ]><html class="no-js oldie" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>Hediyeh Khoramshahi - Urban Planner & Landscape Architect - Updated</title>
+    <meta name="description" content="Urban Planner and Landscape Architect specializing in sustainable urban development, integrated urbanism, and landscape design based in Heidelberg, Germany">
+    <meta name="author" content="Hediyeh Khoramshahi">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
+    
+    <!-- FORCE UNIFORM GRID LAYOUT -->
+    <style>
+        /* Remove ALL shadow overlays completely with maximum specificity */
+        .shadow-overlay,
+        .item-folio__thumb .shadow-overlay,
+        .s-home .shadow-overlay,
+        span.shadow-overlay,
+        div.shadow-overlay {
+            display: none !important;
+            opacity: 0 !important;
+            visibility: hidden !important;
+            background: none !important;
+            background-image: none !important;
+        }
+        
+        <!-- Override ALL masonry styling with maximum specificity */
+        .masonry-wrap .masonry {
+            display: grid !important;
+            grid-template-columns: repeat(2, 1fr) !important;
+            grid-auto-rows: 380px !important;
+            gap: 3.5rem 3.5rem !important;
+            row-gap: 6rem !important;
+            max-width: 1100px !important;
+            margin: 0 auto !important;
+            height: auto !important;
+            width: 100% !important;
+            padding: 0 2rem !important;
+        }
+        
+        /* Responsive grid - single column on mobile */
+        @media only screen and (max-width: 768px) {
+            .masonry-wrap .masonry {
+                grid-template-columns: 1fr !important;
+                gap: 3rem !important;
+                row-gap: 4rem !important;
+                padding: 0 1rem !important;
+            }
+        }
+        
+        .masonry-wrap .masonry .masonry__brick,
+        .masonry-wrap .masonry .masonry__brick.ecological-planning,
+        .masonry-wrap .masonry .masonry__brick.urban-design,
+        .masonry-wrap .masonry .masonry__brick.research-gis,
+        .masonry-wrap .masonry .masonry__brick.community-integration,
+        .masonry-wrap .masonry .masonry__brick.educational-architecture {
+            height: 380px !important;
+            max-height: 380px !important;
+            min-height: 380px !important;
+            overflow: hidden !important;
+            display: flex !important;
+            flex-direction: column !important;
+            width: auto !important;
+            float: none !important;
+            position: static !important;
+            transform: none !important;
+            top: auto !important;
+            left: auto !important;
+            background: #ffffff !important;
+            border-radius: 8px !important;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+            transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+        }
+        
+        .masonry-wrap .masonry .masonry__brick:hover {
+            transform: translateY(-5px) !important;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+        }
+        
+        .masonry-wrap .masonry .masonry__brick .item-folio {
+            height: 100% !important;
+            display: flex !important;
+            flex-direction: column !important;
+            overflow: hidden !important;
+            border-radius: 8px !important;
+        }
+        
+        .masonry-wrap .masonry .masonry__brick .item-folio .item-folio__thumb {
+            height: 260px !important;
+            flex-shrink: 0 !important;
+            overflow: hidden !important;
+            border-radius: 8px 8px 0 0 !important;
+            position: relative !important;
+        }
+        
+        .masonry-wrap .masonry .masonry__brick .item-folio .item-folio__thumb img {
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover !important;
+            object-position: center !important;
+            border-radius: 8px 8px 0 0 !important;
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+        }
+        
+        .masonry-wrap .masonry .masonry__brick .item-folio .item-folio__text {
+            height: 120px !important;
+            flex-shrink: 0 !important;
+            overflow: hidden !important;
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: center !important;
+            padding: 1.5rem !important;
+            background: #ffffff !important;
+            border-radius: 0 0 8px 8px !important;
+            position: relative !important;
+            bottom: auto !important;
+        }
+        
+        .masonry-wrap .masonry .masonry__brick .item-folio .item-folio__title {
+            color: #2c5530 !important;
+            font-size: 1.6rem !important;
+            line-height: 1.3 !important;
+            margin-bottom: 0.5rem !important;
+            font-weight: 600 !important;
+        }
+        
+        .masonry-wrap .masonry .masonry__brick .item-folio .item-folio__cat {
+            color: #666666 !important;
+            font-size: 1.3rem !important;
+            margin: 0 !important;
+            line-height: 1.4 !important;
+        }
+        
+        /* Ensure all project cards have the same structure - 6 projects in 3x2 grid */
+        .masonry-wrap .masonry .masonry__brick:nth-child(5),
+        .masonry-wrap .masonry .masonry__brick:nth-child(6) {
+            grid-column: auto !important;
+            max-width: 100% !important;
+            margin: 0 !important;
+        }
+        
+        @media only screen and (max-width: 768px) {
+            .masonry-wrap .masonry .masonry__brick:nth-child(5),
+            .masonry-wrap .masonry .masonry__brick:nth-child(6) {
+                grid-column: 1 !important;
+                max-width: 100% !important;
+            }
+        }
+        
+        /* Make home heading font size smaller */
+        .home-content h1 {
+            font-size: 4.2rem !important;
+        }
+        
+        @media only screen and (max-width: 1024px) {
+            .home-content h1 {
+                font-size: 3.8rem !important;
+            }
+        }
+        
+        @media only screen and (max-width: 768px) {
+            .home-content h1 {
+                font-size: 3.4rem !important;
+            }
+        }
+        
+        @media only screen and (max-width: 480px) {
+            .home-content h1 {
+                font-size: 3rem !important;
+            }
+        }
+        
+        /* Force "Academic Publications & Research" heading to stay on one line */
+        #blog .section-intro h1 {
+            white-space: nowrap !important;
+            font-size: 4.2rem !important;
+        }
+        
+        @media only screen and (max-width: 1024px) {
+            #blog .section-intro h1 {
+                font-size: 3.8rem !important;
+            }
+        }
+        
+        @media only screen and (max-width: 768px) {
+            #blog .section-intro h1 {
+                font-size: 3.2rem !important;
+            }
+        }
+        
+        @media only screen and (max-width: 600px) {
+            #blog .section-intro h1 {
+                font-size: 2.8rem !important;
+            }
+        }
+        
+        @media only screen and (max-width: 480px) {
+            #blog .section-intro h1 {
+                font-size: 2.4rem !important;
+            }
+        }
+        
+        /* Responsive "Urban Planner & Landscape Architect" heading */
+        #about .section-intro h1 {
+            font-size: 4.2rem !important;
+            line-height: 1.2 !important;
+        }
+        
+        @media only screen and (max-width: 1024px) {
+            #about .section-intro h1 {
+                font-size: 3.8rem !important;
+            }
+        }
+        
+        @media only screen and (max-width: 768px) {
+            #about .section-intro h1 {
+                font-size: 3.2rem !important;
+            }
+        }
+        
+        @media only screen and (max-width: 600px) {
+            #about .section-intro h1 {
+                font-size: 2.8rem !important;
+            }
+        }
+        
+        @media only screen and (max-width: 480px) {
+            #about .section-intro h1 {
+                font-size: 2.4rem !important;
+            }
+        }
+
+        /* Text justification for better readability */
+        .intro-info p,
+        .about-desc p,
+        .lead p,
+        .s-testimonials .testimonial-text,
+        .s-stats .stat-text,
+        .research-interests p,
+        .home-content .intro-position,
+        .home-content .intro-info,
+        .about-content .about-desc,
+        .timeline__desc p,
+        .item-folio__caption p,
+        .s-blog p,
+        .blog-content p,
+        .section-intro p,
+        p {
+            text-align: justify !important;
+        }
+
+        /* CONTACT SECTION FIXES */
+        /* Ensure contact background uses your image */
+        .s-contact {
+            background-image: url("images/hediyeh-bg.jpeg") !important;
+            background-size: cover !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+        }
+
+        /* Justify text in contact section */
+        .s-contact p,
+        .s-contact .lead,
+        .s-contact .section-intro p,
+        .contact__infos p {
+            text-align: justify !important;
+        }
+    </style>
+
+    <!-- script
+    ================================================== -->
+    <script src="js/modernizr.js"></script>
+    <script src="js/pace.min.js"></script>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+</head>
+
+<body id="top">
+
+    <!-- header
+    ================================================== -->
+    <header class="s-header">
+
+        <nav class="header-nav-wrap">
+            <ul class="header-nav">
+                <li class="current"><a class="smoothscroll"  href="#home" title="home">Home</a></li>
+                <li><a class="smoothscroll"  href="#about" title="about">About</a></li>
+                <li><a class="smoothscroll"  href="#experience" title="experience">Experience</a></li>
+                <li><a class="smoothscroll"  href="#projects" title="projects">Projects</a></li>
+                <li><a class="smoothscroll"  href="#blog" title="blog">Blog</a></li>
+                <li><a class="smoothscroll"  href="#contact" title="contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <a class="header-menu-toggle" href="#0"><span>Menu</span></a>
+
+    </header> <!-- end s-header -->
+
+
+   <!-- home
+   ================================================== -->
+   <section id="home" class="s-home page-hero target-section" data-parallax="scroll" data-image-src="images/hediyeh-bg.jpeg" data-natural-width=3000 data-natural-height=2000 data-position-y=center>
+
+        <div class="overlay"></div>
+        <div class="shadow-overlay"></div>
+
+        <div class="home-content">
+
+            <div class="row home-content__main">
+
+                <!-- <h3>Hello There</h3> -->
+
+                <h1>
+                    I am Hediyeh Khoramshahi. <br>
+                    An Urban Planner <br>
+                    & Landscape Architect <br>
+                    based in Germany.
+                </h1>
+
+                <div class="home-content__buttons">
+                    <a href="#projects" class="smoothscroll btn btn--stroke">
+                        View My Projects
+                    </a>
+                    <a href="#about" class="smoothscroll btn btn--stroke">
+                        More About Me
+                    </a>
+                </div>
+
+                <div class="home-content__scroll">
+                    <a href="#about" class="scroll-link smoothscroll">
+                        <span>Scroll Down</span>
+                    </a>
+                </div>
+
+            </div>
+
+        </div> <!-- end home-content -->
+
+        <ul class="home-social">
+            <li>
+                <a href="http://linkedin.com/in/hediyeh-khoramshahi" target="_blank"><i class="im im-linkedin" aria-hidden="true"></i><span>LinkedIn</span></a>
+            </li>
+            <li>
+                <a href="mailto:hediyehkhoramshahi94@gmail.com"><i class="im im-mail" aria-hidden="true"></i><span>Email</span></a>
+            </li>
+            <li>
+                <a href="#"><i class="im im-github" aria-hidden="true"></i><span>GitHub</span></a>
+            </li>
+            <li>
+                <a href="#"><i class="im im-twitter" aria-hidden="true"></i><span>Twitter</span></a>
+            </li>
+        </ul> 
+        <!-- end home-social -->
+
+    </section> <!-- end s-home -->
+
+
+    <!-- about
+    ================================================== -->
+    <section id="about" class="s-about target-section">
+        
+        <div class="row narrow section-intro has-bottom-sep">
+            <div class="col-full text-center">
+                <h3>About</h3>
+                <h1>Urban Planner & Landscape Architect</h1>
+                <p class="lead">Passionate urban planner and landscape architect dedicated to creating sustainable, livable cities through integrated urbanism and innovative design approaches. Currently pursuing Master's in Integrated Urbanism and Sustainable Design at Stuttgart University while based in Heidelberg, Germany.</p>
+            </div>
+        </div>
+
+        <div class="row about-content">
+
+            <div class="col-six tab-full left">
+                <h3>My Interdisciplinary Approach</h3>
+
+                <p>As an urban planner and landscape architect, I bring a unique interdisciplinary perspective that bridges the built and natural environments. My work integrates landscape architecture principles with urban planning strategies to create holistic, sustainable solutions for contemporary urban challenges.</p>
+
+                <p>
+                With extensive technical expertise in design software, GIS analysis, and project management tools, I combine analytical thinking with creative design solutions. My proficiency spans from Microsoft Office and Adobe Creative Suite to advanced 3D modeling software like Revit and 3ds Max, enabling me to visualize and communicate complex urban planning concepts effectively. Experience with QGIS, Python programming, and participatory mapping tools enhances my ability to conduct thorough spatial analysis and community engagement processes.
+                </p>
+            </div>
+
+            <div class="col-six tab-full right">
+                <h3>Research Interests</h3>
+
+                <ul>
+                    <li><strong>Community-Engaged Research & Participatory Mapping:</strong> Developing inclusive methodologies that center community voices in planning processes and spatial analysis</li>
+                    <li><strong>Human-Nature Interaction & Border Ecologies:</strong> Investigating the complex relationships between built environments, natural systems, and cross-cultural spaces</li>
+                    <li><strong>Creative and Ethnographic Field Methodologies:</strong> Employing innovative qualitative research approaches to understand place-based experiences and cultural landscapes</li>
+                    <li><strong>Visual Storytelling & Data Visualization:</strong> Translating complex spatial data and community narratives into compelling visual communications for diverse audiences</li>
+                </ul>
+            </div>
+
+        </div> <!-- end about-content -->
+
+        <div class="row about-content">
+
+            <div class="col-six tab-full left">
+                <h3>Technical Skills & Software Proficiency</h3>
+
+                <ul>
+                    <li><strong>Microsoft Office Suite:</strong> Microsoft Word, Excel, PowerPoint, Access</li>
+                    <li><strong>Graphic Design:</strong> Adobe Photoshop, InDesign, Digital Vector Design, Digital Drawing, Sketching</li>
+                    <li><strong>2D & 3D Modeling:</strong> AutoCAD, Autodesk Revit, 3ds Max, Vray, Rhino3D, SketchUp, Lumion Render and Video Animation</li>
+                    <li><strong>GIS & Environmental Modeling:</strong> QGIS, Geographical Information Systems (GIS), Environmental Modeling</li>
+                    <li><strong>Data Analysis:</strong> Data Design, Data Reporting, Data Visualization, SWOT Analysis</li>
+                    <li><strong>Project Management:</strong> Project Documentation, Budget Planning, Bookkeeping Experience, Strategic Problem Solving, Participatory Mapping Tools (MSP tools), Cooperation Management for Practitioners (GIZ)</li>
+                    <li><strong>Programming Languages:</strong> Python</li>
+                </ul>
+            </div>
+
+            <div class="col-six tab-full right">
+                <!-- Empty right column for visual balance -->
+            </div>
+
+        </div> <!-- end about-content -->
+
+        <div class="row about-content about-content--buttons">
+
+            <div class="col-six tab-full left">
+                <a href="#0" class="btn btn--primary full-width">Download My CV</a>
+            </div>
+
+        </div> <!-- end about-content buttons -->
+
+        <div class="row about-content about-content--timeline">
+
+            <div class="col-full text-center">
+                <h3>Professional Experience</h3>
+            </div>
+
+            <div class="col-six tab-full left">
+                <div class="timeline">
+
+                    <div class="timeline__block">
+                        <div class="timeline__bullet"></div>
+                        <div class="timeline__header">
+                            <p class="timeline__timeframe">Oct 2024 - May 2025</p>
+                            <h3>Higher Education Research Assistant</h3>
+                            <h5>Ludwig Maximilian University of Munich</h5>
+                        </div>
+                        <div class="timeline__desc">
+                            <p>Assistance in ERC Grant Research Project focusing on desirable sustainable future with socio-economic approach. Conducting literature review, data collection, analysis and visualization. Facilitating participatory planning workshops to engage community members in co-creating design solutions.</p>
+                        </div>
+                    </div> <!-- end timeline__block -->
+
+                    <div class="timeline__block">
+                        <div class="timeline__bullet"></div>
+                        <div class="timeline__header">
+                            <p class="timeline__timeframe">May 2022 - Oct 2023</p>
+                            <h3>Landscape Designer</h3>
+                            <h5>Homake</h5>
+                        </div>
+                        <div class="timeline__desc">	
+                            <p>Conducted landscape analysis to interpret historical and cultural layers of sites, informing conservation and design strategies. Specialized in landscape conservation planning, biodiversity mapping, and indoor/outdoor landscape design.</p>
+                        </div>
+                    </div> <!-- end timeline__block -->
+
+                </div> <!-- end timeline -->
+            </div> <!-- end left -->
+
+            <div class="col-six tab-full right">
+                <div class="timeline">
+
+                    <div class="timeline__block">
+                        <div class="timeline__bullet"></div>
+                        <div class="timeline__header">
+                            <p class="timeline__timeframe">Sep 2020 - Apr 2022</p>
+                            <h3>Landscape Architect</h3>
+                            <h5>Iranian Architecture Center</h5>
+                        </div>
+                        <div class="timeline__desc">
+                            <p>Collaborated on project design and conducted site surveys while monitoring progress. Discussed requirements with clients and presented research proposals. Used computational processes to model and experiment with design solutions.</p>
+                        </div>
+                    </div> <!-- end timeline__block -->
+
+                    <div class="timeline__block">
+                        <div class="timeline__bullet"></div>
+                        <div class="timeline__header">
+                            <p class="timeline__timeframe">Sep 2018 - Sep 2020</p>
+                            <h3>Higher Education Research Assistant</h3>
+                            <h5>Tarbiat Modares University</h5>
+                        </div>
+                        <div class="timeline__desc">
+                            <p>Conducted qualitative data collection including semi-structured interviews and on-site ethnographic observation to document community perspectives. Responsible for documentation of research methods, data collection processes, and administrative support.</p>
+                        </div>
+                    </div> <!-- end timeline__block -->
+
+                </div> <!-- end timeline -->
+            </div> <!-- end right -->
+
+        </div> <!-- end about-content timeline -->
+
+        <!-- Education Section -->
+        <div class="row about-content about-content--timeline">
+
+            <div class="col-full text-center">
+                <h3>Education</h3>
+            </div>
+
+            <div class="col-six tab-full left">
+                <div class="timeline">
+
+                    <div class="timeline__block">
+                        <div class="timeline__bullet"></div>
+                        <div class="timeline__header">
+                            <p class="timeline__timeframe">2024 - Current</p>
+                            <h3>Master of Science</h3>
+                            <h5>Stuttgart University</h5>
+                        </div>
+                        <div class="timeline__desc">
+                            <p>Integrated Urbanism and Sustainable Design. Currently pursuing advanced studies in sustainable urban development, focusing on innovative design approaches for contemporary urban challenges. Current Grade: 1.5 (A+)</p>
+                        </div>
+                    </div> <!-- end timeline__block -->
+
+                    <div class="timeline__block">
+                        <div class="timeline__bullet"></div>
+                        <div class="timeline__header">
+                            <p class="timeline__timeframe">2018 - 2020</p>
+                            <h3>Master of Arts</h3>
+                            <h5>Tarbiat Modares University</h5>
+                        </div>
+                        <div class="timeline__desc">	
+                            <p>Landscape Architecture. Specialized in landscape design, environmental planning, and sustainable site development. Graduated with excellent academic performance. Grade: 18.3/20</p>
+                        </div>
+                    </div> <!-- end timeline__block -->
+
+                </div> <!-- end timeline -->
+            </div> <!-- end left -->
+
+            <div class="col-six tab-full right">
+                <div class="timeline">
+
+                    <div class="timeline__block">
+                        <div class="timeline__bullet"></div>
+                        <div class="timeline__header">
+                            <p class="timeline__timeframe">2014 - 2018</p>
+                            <h3>Bachelor of Arts</h3>
+                            <h5>Soore University</h5>
+                        </div>
+                        <div class="timeline__desc">
+                            <p>Interior Architecture. Foundation studies in spatial design, architectural principles, and interior environment planning. Developed strong technical and creative skills in design fundamentals. Grade: 16.75/20</p>
+                        </div>
+                    </div> <!-- end timeline__block -->
+
+                </div> <!-- end timeline -->
+            </div> <!-- end right -->
+
+        </div> <!-- end education timeline -->
+
+    </section> <!-- end about -->
+    
+
+    <!-- projects
+    ================================================== -->
+    <section id="projects" class="s-works target-section">
+
+        <div class="row narrow section-intro has-bottom-sep">
+            <div class="col-full">
+                <h3>Projects</h3>
+                <h1>Urban Planning Portfolio</h1>
+                
+                <p class="lead">A selection of my urban planning projects showcasing sustainable development, spatial analysis, and community-centered design approaches. Each project reflects my commitment to creating livable, environmentally responsible urban spaces.</p>
+            </div>
+        </div>
+
+        <!-- Project Category Filter -->
+        <div class="row project-filter">
+            <div class="col-full">
+                <ul class="filter-menu">
+                    <li><a href="#" class="filter-btn active" data-filter="*">All Projects</a></li>
+                    <li><a href="#" class="filter-btn" data-filter=".urban-design">Urban Design & Planning</a></li>
+                    <li><a href="#" class="filter-btn" data-filter=".research-gis">Research & GIS Analysis</a></li>
+                    <li><a href="#" class="filter-btn" data-filter=".ecological-planning">Ecological Planning</a></li>
+                    <li><a href="#" class="filter-btn" data-filter=".community-integration">Community Integration</a></li>
+                    <li><a href="#" class="filter-btn" data-filter=".educational-architecture">Educational Architecture</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row masonry-wrap">
+            <div class="masonry">
+
+                <div class="masonry__brick ecological-planning">
+                    <div class="item-folio">
+
+                        <div class="item-folio__thumb">
+                            <a href="images/portfolio/gallery/g-chitgar-symphony.jpg" class="thumb-link" title="Chitgar Symphony" data-size="1050x700">
+                                <img src="images/portfolio/chitgar-symphony.jpg" 
+                                     srcset="images/portfolio/chitgar-symphony.jpg 1x, images/portfolio/chitgar-symphony.jpg 2x" alt="Chitgar Symphony - Ecological Urban Corridor Design">
+                            </a>
+                        </div>
+
+                        <div class="item-folio__text">
+                            <h3 class="item-folio__title">
+                                Chitgar Symphony
+                            </h3>
+                            <p class="item-folio__cat">
+                                Master's Thesis - Green Corridor Design
+                            </p>
+                        </div>
+
+                        <a href="#" class="item-folio__project-link" title="Project link">
+                            <i class="im im-link"></i>
+                        </a>
+
+                        <div class="item-folio__caption">
+                            <p><strong>The Creation of an Ecologically-Oriented Urban Corridor: Enhancing Ecological Urban Branding and Biodiversity Preservation through integrating Chitgar Lake, Chitgar Park, and the Botanical Garden in Tehran, Iran.</strong></p>
+                            <p>This Master's thesis project at Tarbiat Modares University creates a tangible representation of Tehran's dedication to ecological sustainability. The green corridor design incorporates educational interpretation elements, informative signage, interactive displays, and educational paths to enhance community engagement and environmental awareness.</p>
+                            <p>Key features include vertical gardens, living walls, indigenous plant species, multi-functional recreational spaces, cultural event venues, and children's learning gardens. The project focuses on habitat connectivity, biodiversity conservation, and establishing a unique ecological urban character that promotes community ownership and environmental stewardship.</p>
+                            <p><em>Supervised by Dr. Medi Haghighat Bin with consultation from Professor Mohammad Reza Pourjafar.</em></p>
+                            
+                            <p><strong>Project Visualizations:</strong></p>
+                            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin: 20px 0;">
+                                <a href="images/portfolio/chitgar-symphony.jpg" target="_blank">
+                                    <img src="images/portfolio/chitgar-symphony.jpg" alt="Chitgar Symphony Main View" style="width: 100%; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+                                </a>
+                                <a href="images/portfolio/chitgar-symphony2.jpg" target="_blank">
+                                    <img src="images/portfolio/chitgar-symphony2.jpg" alt="Chitgar Symphony Design 2" style="width: 100%; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+                                </a>
+                                <a href="images/portfolio/chitgar-symphony3.jpg" target="_blank">
+                                    <img src="images/portfolio/chitgar-symphony3.jpg" alt="Chitgar Symphony Design 3" style="width: 100%; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+                                </a>
+                                <a href="images/portfolio/chitgar-symphony4.jpg" target="_blank">
+                                    <img src="images/portfolio/chitgar-symphony4.jpg" alt="Chitgar Symphony Design 4" style="width: 100%; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+                                </a>
+                                <a href="images/portfolio/chitgar-symphony5.jpg" target="_blank">
+                                    <img src="images/portfolio/chitgar-symphony5.jpg" alt="Chitgar Symphony Design 5" style="width: 100%; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+                                </a>
+                            </div>
+                        </div>
+
+                    </div> <!-- end item-folio -->
+                </div> <!-- end masonry__brick -->
+
+                <div class="masonry__brick urban-design">
+                    <div class="item-folio">
+
+                        <div class="item-folio__thumb">
+                            <a href="images/portfolio/gallery/g-pedestrian-serenade.jpg" class="thumb-link" title="Pedestrian Serenade" data-size="1050x700">
+                                <img src="images/portfolio/pedestrian-serenade.jpg" 
+                                     srcset="images/portfolio/pedestrian-serenade.jpg 1x, images/portfolio/pedestrian-serenade.jpg 2x" alt="Pedestrian Serenade - Vanak Village Pedestrian Street Design">
+                            </a>
+                        </div>
+
+                        <div class="item-folio__text">
+                            <h3 class="item-folio__title">
+                                Pedestrian Serenade
+                            </h3>
+                            <p class="item-folio__cat">
+                                Urban Design - Pedestrian Street Revitalization
+                            </p>
+                        </div>
+
+                        <a href="#" class="item-folio__project-link" title="Project link">
+                            <i class="im im-link"></i>
+                        </a>
+
+                        <div class="item-folio__caption">
+                            <p><strong>Pedestrian Serenade: Revitalizing Vanak Village through Pedestrian-Oriented Design</strong></p>
+                            <p>This landscape design project at Tarbiat Modares University centers on creating a vibrant pedestrian street in Vanak Village, Tehran, Iran. Led by Dr. Mehdi Haghighat Bin, the project seeks to rejuvenate the urban structure through pedestrian-oriented design while preserving the district's distinct cultural legacy.</p>
+                            <p><strong>Key Design Elements:</strong> Pedestrian-focused infrastructure with expanded sidewalks, designated pedestrian areas, and clearly marked crosswalks. The design incorporates seating areas, public art installations, pocket parks, and indigenous plant species to create an inclusive environment that fosters social interaction and supports local businesses.</p>
+                            <p><strong>Cultural Integration:</strong> The design method emphasizes understanding and conservation of Vanak Village's distinctive essence, incorporating traditional aesthetic elements that create seamless connection between the pedestrian street and surrounding built environment. Features include designated areas for open-air markets, artisanal product stalls, and cultural gatherings to support the local economy.</p>
+                            
+                            <p><strong>Project Visualizations:</strong></p>
+                            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin: 20px 0;">
+                                <a href="images/portfolio/pedestrian-serenade.jpg" target="_blank">
+                                    <img src="images/portfolio/pedestrian-serenade.jpg" alt="Pedestrian Serenade Main Design" style="width: 100%; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+                                </a>
+                                <a href="images/portfolio/pedestrian-serenade2.jpg" target="_blank">
+                                    <img src="images/portfolio/pedestrian-serenade2.jpg" alt="Pedestrian Serenade Design 2" style="width: 100%; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+                                </a>
+                            </div>
+                        </div>
+
+                    </div> <!-- end item-folio -->
+                </div> <!-- end masonry__brick -->
+
+                <div class="masonry__brick research-gis">
+                    <div class="item-folio">
+
+                        <div class="item-folio__thumb">
+                            <a href="images/portfolio/gallery/who-gets-green-1.jpg" class="thumb-link" data-size="1050x700">
+                                <img src="images/portfolio/who-gets-green-1.jpg" 
+                                     srcset="images/portfolio/who-gets-green-1.jpg 1x, images/portfolio/who-gets-green-1.jpg 2x" alt="">
+                            </a>
+                        </div>
+
+                        <div class="item-folio__text">
+                            <h3 class="item-folio__title">
+                                Who Gets the Green?
+                            </h3>
+                            <p class="item-folio__cat">
+                                GIS Research - Green Space Equity Analysis
+                            </p>
+                        </div>
+
+                        <a href="#" class="item-folio__project-link" title="Project link">
+                            <i class="im im-link"></i>
+                        </a>
+
+<div class="item-folio__caption">
+    <p><strong>Who Gets the Green? Analyzing Green Space Distribution and Accessibility in Urban Areas</strong></p>
+    <p><strong>Colleagues:</strong> Ayesha Parveen</p>
+    <p>This comprehensive GIS research project examines the equitable distribution of green spaces across different neighborhoods and socioeconomic areas. Conducted in collaboration with colleague Ayesha Parveen under the supervision of Dr. Leonie Fischer.</p>
+    <p><strong>Research Visualizations:</strong></p>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin: 20px 0;">
+        <a href="images/portfolio/who-gets-green-1.jpg" target="_blank">
+            <img src="images/portfolio/who-gets-green-1.jpg" alt="Green Space Analysis Map 1" style="width: 100%; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+        </a>
+        <a href="images/portfolio/who-gets-green-2.jpg" target="_blank">
+            <img src="images/portfolio/who-gets-green-2.jpg" alt="Green Space Analysis Map 2" style="width: 100%; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+        </a>
+        <a href="images/portfolio/who-gets-green-3.jpg" target="_blank">
+            <img src="images/portfolio/who-gets-green-3.jpg" alt="Green Space Analysis Map 3" style="width: 100%; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+        </a>
+        <a href="images/portfolio/who-gets-green-4.jpg" target="_blank">
+            <img src="images/portfolio/who-gets-green-4.jpg" alt="Green Space Analysis Map 4" style="width: 100%; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+        </a>
+        <a href="images/portfolio/Who Gets the Green2.png" target="_blank">
+            <img src="images/portfolio/Who Gets the Green2.png" alt="Additional Analysis 2" style="width: 100%; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+        </a>
+        <a href="images/portfolio/Who Gets the Green3.png" target="_blank">
+            <img src="images/portfolio/Who Gets the Green3.png" alt="Additional Analysis 3" style="width: 100%; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+        </a>
+        <a href="images/portfolio/Who Gets the Green4.png" target="_blank">
+            <img src="images/portfolio/Who Gets the Green4.png" alt="Additional Analysis 4" style="width: 100%; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+        </a>
+        <a href="images/portfolio/Who Gets the Green5.png" target="_blank">
+            <img src="images/portfolio/Who Gets the Green5.png" alt="Additional Analysis 5" style="width: 100%; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+        </a>
+    </div>
+</div>
+                    </div> <!-- end item-folio -->                                   
+                </div> <!-- end masonry__brick -->
+
+
+                <div class="masonry__brick ecological-planning">
+                    <div class="item-folio">
+
+                        <div class="item-folio__thumb">
+                            <a href="images/portfolio/gallery/g-river-of-life.jpg" class="thumb-link" data-size="1050x700">
+                                <img src="images/portfolio/River of life.jpg"
+                                     srcset="images/portfolio/River of life.jpg 1x, images/portfolio/River of life.jpg 2x" alt="River of Life Project">
+                            </a>
+                        </div>
+
+                        <div class="item-folio__text">
+                            <h3 class="item-folio__title">
+                                River of Life
+                            </h3>
+                            <p class="item-folio__cat">
+                                Ecological Restoration & Habitat Conservation
+                            </p>
+                        </div>
+
+                        <a href="#" class="item-folio__project-link" title="Project link">
+                            <i class="im im-link"></i>
+                        </a>
+
+<div class="item-folio__caption">
+    <p><strong>River of Life: Ecological Restoration and Sustainable Land Use Project</strong></p>
+    <p>The project focuses on preserving and rehabilitating the indigenous ecosystem, identifying vulnerable habitats, and enhancing biodiversity through habitat restoration and sustainable land use practices. It strategically incorporates recreational amenities such as walking trails, cycling paths, and picnic areas to foster a meaningful connection between individuals and the natural environment while respecting ecologically delicate regions.</p>
+    <p><strong>Sustainability & Community Engagement:</strong> Emphasizing sustainability, the project implements resource management strategies, water conservation, waste management, and eco-friendly infrastructure to reduce environmental impact. Moreover, community engagement and education play a pivotal role, as the project aims to instill ecological consciousness within the community through educational signage, nature-based learning opportunities, and collaborative initiatives, fostering a sense of ownership and pride in conservation efforts.</p>
+        </a>
+    </div>
+                    </div> <!-- end item-folio -->
+                </div> <!-- end masonry__brick -->
+
+                <div class="masonry__brick community-integration">
+                    <div class="item-folio">
+
+                        <div class="item-folio__thumb">
+                            <a href="images/portfolio/gallery/g-neckar-nexus.png" class="thumb-link" data-size="1050x700">
+                                <img src="images/portfolio/Neckar nexus.png"
+                                     srcset="images/portfolio/Neckar nexus.png 1x, images/portfolio/Neckar nexus.png 2x" alt="Neckar Nexus Project">
+                            </a>
+                        </div>
+
+                        <div class="item-folio__text">
+                            <h3 class="item-folio__title">
+                                Neckar Nexus: The Neckar as a Mediator
+                            </h3>
+                            <p class="item-folio__cat">
+                                Collaborative Urban Planning - Social Inclusion & Community Integration
+                            </p>
+                        </div>
+
+                        <a href="#" class="item-folio__project-link" title="Project link">
+                            <i class="im im-link"></i>
+                        </a>
+
+                        <div class="item-folio__caption">
+                            <p><strong>Neckar Nexus: The Neckar as a Mediator - Bridging Communities Through River-Centered Urban Planning</strong></p>
+                            <p><strong>Colleagues:</strong> Habiba Al Harrasi, Gréta Fazekas, and Veronika Babiča</p>
+                            <p><em>Supervised by Dr. Shaharin Elham, Angie Carolina Camacho Gutiérrez, Dr. Astrid Ley, and Dr. Leonie Fischer.</em></p>
+                            <p><strong>Research Methodology:</strong> We conducted extensive field research including semi-structured interviews, surveys, and public life observations, particularly focusing on the Arab community in Bad Cannstatt. Our research revealed challenges of time scarcity, emotional distance from the river, and cultural gaps, while identifying opportunities for intercultural exchange and community building.</p>
+                            <p><strong>Strategic Framework:</strong> Our three-phase approach centers on Social Support, Diversity & Inclusion, and Social Cohesion & Trust. Phase 1 maps community encounters and needs; Phase 2 activates connections through co-designed cultural events and workshops; Phase 3 leverages the Neckar as a long-term mediator through sustainable community spaces and digital platforms.</p>
+                            <p><strong>Project Visualizations:</strong></p>
+                            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin: 20px 0;">
+                                <a href="images/portfolio/gallery/g-neckar-nexus.png" target="_blank">
+                                    <img src="images/portfolio/Neckar nexus.png" alt="Neckar Nexus Image 1" style="width: 100%; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+                                </a>
+                                <a href="images/portfolio/gallery/g-neckar-nexus-2.png" target="_blank">
+                                    <img src="images/portfolio/Neckar nexus 2.png" alt="Neckar Nexus Image 2" style="width: 100%; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+                                </a>
+                            </div>
+                        </div>
+
+                    </div> <!-- end item-folio -->
+                </div> <!-- end masonry__brick -->
+
+                <div class="masonry__brick educational-architecture">
+                    <div class="item-folio">
+
+                        <div class="item-folio__thumb">
+                            <a href="images/portfolio/gallery/g-It Takes a Village to Raise a Child 1.jpg" class="thumb-link" title="It Takes a Village to Raise a Child" data-size="1050x700">
+                                <img src="images/portfolio/It Takes a Village to Raise a Child 1.jpg"
+                                     srcset="images/portfolio/It Takes a Village to Raise a Child 1.jpg 1x, images/portfolio/It Takes a Village to Raise a Child 1.jpg 2x" alt="Village School Project - Community-Centered Educational Architecture">
+                            </a>
+                        </div>
+
+                        <div class="item-folio__text">
+                            <h3 class="item-folio__title">
+                                It Takes a Village to Raise a Child
+                            </h3>
+                            <p class="item-folio__cat">
+                                Educational Architecture - Community-Centered School Design
+                            </p>
+                        </div>
+
+                        <a href="#" class="item-folio__project-link" title="Project link">
+                            <i class="im im-link"></i>
+                        </a>
+
+                        <div class="item-folio__caption">
+                            <p><strong>"It Takes a Village to Raise a Child" - Community-Centered Educational Architecture</strong></p>
+                            <p><strong>Colleagues:</strong> Silvia Ruiz, Shraddha Adhikari, and Ayesha Parveen</p>
+                            <p>This architectural project reimagines educational spaces as organic extensions of village life, beginning not with walls or classrooms, but with the child and the community around them. The design philosophy centers on creating a "structure for belonging" that grows naturally with the village rhythm.</p>
+                            <p><strong>Design Concept:</strong> The school unfolds as five flexible learning units arranged around a central courtyard - the heart of the design where learning flows through open air, where rain falls and dries, where sounds echo and children play. Each unit serves as a space for exploring, learning, and growing, adaptable for lessons, storytelling, or circular play.</p>
+                            <p><strong>Community Integration:</strong> The design features three essential layers: the inner nurturing space, the permeable shaded walkways for communication between instructors and caregivers, and the "community edge" - an invitation rather than a barrier. This edge bends where people linger and widens where they gather, shaped not by the architect's hand but by the village's footsteps.</p>
+                            <p><strong>Organic Growth:</strong> The architecture allows for natural expansion - a kitchen for village meals, a library with local stories, additional classrooms, and celebration spaces emerge as needed. The school doesn't transform the village; the village shapes the school, creating a rhythm of belonging that remains forever open to growth.</p>
+                            <p><strong>Project Visualizations:</strong></p>
+                            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin: 20px 0;">
+                                <a href="images/portfolio/It Takes a Village to Raise a Child 1.jpg" target="_blank">
+                                    <img src="images/portfolio/It Takes a Village to Raise a Child 1.jpg" alt="Village School Design 1" style="width: 100%; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+                                </a>
+                                <a href="images/portfolio/It Takes a Village to Raise a Child 2.jpg" target="_blank">
+                                    <img src="images/portfolio/It Takes a Village to Raise a Child 2.jpg" alt="Village School Design 2" style="width: 100%; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+                                </a>
+                            </div>
+                        </div>
+
+                    </div> <!-- end item-folio -->
+                </div> <!-- end masonry__brick -->
+        </div> <!-- end masonry -->
+
+    </section> <!-- end works -->
+
+
+    <!-- blog
+    ================================================== -->
+    <section id="blog" class="s-blog target-section">
+
+        <div class="row narrow section-intro has-bottom-sep">
+            <div class="col-full">
+                <h3>Publications & Research</h3>
+                <h1>Academic Publications & Research</h1>
+                <p class="lead">My research focuses on sustainable urban development, landscape architecture, and the integration of nature-based solutions in urban environments. Exploring human-nature interactions and innovative approaches to urban green infrastructure.</p>
+            </div>
+        </div>
+
+        <div class="row blog-content">
+            <div class="col-full">
+
+                <div class="blog-list block-1-2 block-tab-full">
+                    <article class="col-block">
+                                
+                        <div class="blog-date">
+                            <a href="blog-single.html">2021</a>
+                        </div>  
+                        
+                        <h2 class="h01"><a href="blog-single.html">Improving landscape in urban green infrastructure with branding approach</a></h2>
+                        <p>
+                        Published in the Journal of Urban Design Discourse: A Review of Contemporary Literatures and Theories. This comprehensive research explores solutions for sustainable urban branding through the lens of human-nature interaction and Nature Contributions to People (NCP). The study integrates landscape design principles with urban branding strategies to enhance green infrastructure effectiveness and community engagement.
+                        </p>
+
+                        <div class="blog-cat">
+                                <a href="blog.html">Urban Design</a><a href="blog.html">Green Infrastructure</a><a href="blog.html">Urban Branding</a><a href="blog.html">Human-Nature</a>
+                        </div>
+
+                        
+                    </article>
+                </div> <!-- end blog-list -->
+
+            </div> <!-- end col-full -->
+        </div> <!-- end blog-content -->
+
+    </section> <!-- end s-blog -->
+
+
+    <!-- s-stats
+    ================================================== -->
+    <section id="contact" class="s-contact target-section">
+
+        <div class="overlay"></div>
+
+        <div class="row narrow section-intro">
+            <div class="col-full">
+                <h3>Contact</h3>
+                <h1>Let's Discuss Your Project</h1>
+                
+                <p class="lead">Interested in collaborating on urban planning projects or discussing sustainable development opportunities? I'd love to hear about your ideas and explore how we can work together to create better communities.</p>
+            </div>
+        </div>
+
+        <div class="row contact__main">
+            <div class="col-eight tab-full contact__form">
+                <form name="contactForm" id="contactForm" method="post" action="">
+                    <fieldset>
+    
+                    <div class="form-field">
+                        <input name="contactName" type="text" id="contactName" placeholder="Name" value="" minlength="2" required="" aria-required="true" class="full-width">
+                    </div>
+                    <div class="form-field">
+                        <input name="contactEmail" type="email" id="contactEmail" placeholder="Email" value="" required="" aria-required="true" class="full-width">
+                    </div>
+                    <div class="form-field">
+                        <input name="contactSubject" type="text" id="contactSubject" placeholder="Subject" value="" class="full-width">
+                    </div>
+                    <div class="form-field">
+                        <textarea name="contactMessage" id="contactMessage" placeholder="message" rows="10" cols="50" required="" aria-required="true" class="full-width"></textarea>
+                    </div>
+                    <div class="form-field">
+                        <button class="full-width btn--primary">Submit</button>
+                        <div class="submit-loader">
+                            <div class="text-loader">Sending...</div>
+                            <div class="s-loader">
+                                <div class="bounce1"></div>
+                                <div class="bounce2"></div>
+                                <div class="bounce3"></div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    </fieldset>
+                </form>
+
+                <!-- contact-warning -->
+                <div class="message-warning">
+                    Something went wrong. Please try again.
+                </div> 
+            
+                <!-- contact-success -->
+                <div class="message-success">
+                    Your message was sent, thank you!<br>
+                </div>
+                        
+            </div>
+            <div class="col-four tab-full contact__infos">
+                <h4 class="h06">Email</h4>
+                <p>hediyehkhoramshahi94@gmail.com
+                </p>
+
+                <h4 class="h06">LinkedIn</h4>
+                <p>
+                <a href="http://linkedin.com/in/hediyeh-khoramshahi" target="_blank">linkedin.com/in/hediyeh-khoramshahi</a>
+                </p>
+
+                <h4 class="h06">Location</h4>
+                <p>
+                Heidelberg, Germany
+                </p>
+            </div>
+
+        </div>
+
+    </section> <!-- end s-contact -->
+
+
+    <!-- footer
+    ================================================== -->
+    <footer>
+        <div class="row">
+            <div class="col-full">
+
+                <ul class="footer-social">
+                    <li><a href="#0">
+                        <i class="im im-facebook" aria-hidden="true"></i>
+                        <span>Facebook</span>
+                    </a></li>
+                    <li><a href="#0">
+                        <i class="im im-twitter" aria-hidden="true"></i>
+                        <span>Twitter</span>
+                    </a></li>
+                    <li><a href="#0">
+                        <i class="im im-instagram" aria-hidden="true"></i>
+                        <span>Instagram</span>
+                    </a></li>
+                    <li><a href="#0">
+                        <i class="im im-behance" aria-hidden="true"></i>
+                        <span>Behance</span>
+                    </a></li>
+                    <li><a href="#0">
+                        <i class="im im-pinterest" aria-hidden="true"></i>
+                        <span>Pinterest</span>
+                    </a></li>
+                </ul>
+                    
+            </div>
+        </div>
+
+        <div class="row footer-bottom">
+
+            <div class="col-twelve">
+                <div class="copyright">
+                    <span>© Copyright Hediyeh Khoramshahi 2025</span> 
+                    <span>Urban Planning Professional</span>	
+                </div>
+
+                <div class="go-top">
+                <a class="smoothscroll" title="Back to Top" href="#top"><i class="im im-arrow-up" aria-hidden="true"></i></a>
+                </div>
+            </div>
+
+        </div> <!-- end footer-bottom -->
+
+    </footer> <!-- end footer -->
+
+
+    <!-- photoswipe background
+    ================================================== -->
+    <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
+
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button> <button class="pswp__button pswp__button--share" title=
+                    "Share"></button> <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom" title=
+                    "Zoom in/out"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button> <button class="pswp__button pswp__button--arrow--right" title=
+                "Next (arrow right)"></button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+
+        </div>
+
+    </div><!-- end photoSwipe background -->
+
+    <div id="preloader">
+        <div id="loader"></div>
+    </div>
+
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    
+    <!-- FORCE GRID LAYOUT AFTER PAGE LOAD -->
+    <script>
+    $(document).ready(function() {
+        // Disable any masonry initialization
+        if (window.Masonry) {
+            window.Masonry = function() { return false; };
+        }
+        
+        // Force grid layout styles
+        $('.masonry').css({
+            'display': 'grid',
+            'grid-template-columns': 'repeat(2, 1fr)',
+            'grid-auto-rows': '380px',
+            'gap': '2.5rem',
+            'max-width': '1100px',
+            'margin': '0 auto',
+            'width': '100%',
+            'padding': '0 2rem'
+        });
+        
+        // Apply responsive styles
+        if ($(window).width() <= 768) {
+            $('.masonry').css({
+                'grid-template-columns': '1fr',
+                'gap': '2rem',
+                'padding': '0 1rem'
+            });
+        }
+        
+        $('.masonry__brick').each(function() {
+            $(this).css({
+                'height': '380px',
+                'max-height': '380px',
+                'overflow': 'hidden',
+                'display': 'flex',
+                'flex-direction': 'column',
+                'width': 'auto',
+                'float': 'none',
+                'position': 'static',
+                'transform': 'none',
+                'top': 'auto',
+                'left': 'auto',
+                'background': '#ffffff',
+                'border-radius': '8px',
+                'box-shadow': '0 4px 15px rgba(0, 0, 0, 0.1)',
+                'transition': 'transform 0.3s ease, box-shadow 0.3s ease'
+            });
+            
+            $(this).find('.item-folio').css({
+                'height': '100%',
+                'display': 'flex',
+                'flex-direction': 'column',
+                'overflow': 'hidden',
+                'border-radius': '8px'
+            });
+            
+            $(this).find('.item-folio__thumb').css({
+                'height': '260px',
+                'flex-shrink': '0',
+                'overflow': 'hidden',
+                'border-radius': '8px 8px 0 0',
+                'position': 'relative'
+            });
+            
+            $(this).find('.item-folio__thumb img').css({
+                'width': '100%',
+                'height': '100%',
+                'object-fit': 'cover',
+                'object-position': 'center',
+                'border-radius': '8px 8px 0 0'
+            });
+            
+            $(this).find('.item-folio__text').css({
+                'height': '120px',
+                'flex-shrink': '0',
+                'overflow': 'hidden',
+                'display': 'flex',
+                'flex-direction': 'column',
+                'justify-content': 'center',
+                'padding': '1.5rem',
+                'background': '#ffffff',
+                'border-radius': '0 0 8px 8px',
+                'position': 'relative',
+                'bottom': 'auto'
+            });
+            
+            $(this).find('.item-folio__title').css({
+                'color': '#2c5530',
+                'font-size': '1.6rem',
+                'line-height': '1.3',
+                'margin-bottom': '0.5rem',
+                'font-weight': '600'
+            });
+            
+            $(this).find('.item-folio__cat').css({
+                'color': '#666666',
+                'font-size': '1.3rem',
+                'margin': '0',
+                'line-height': '1.4'
+            });
+        });
+        
+        // No special styling needed for 6th project - it fits naturally in the 3x2 grid
+        
+        // Handle responsive changes
+        $(window).resize(function() {
+            if ($(window).width() <= 768) {
+                $('.masonry').css({
+                    'grid-template-columns': '1fr',
+                    'gap': '2rem',
+                    'padding': '0 1rem'
+                });
+                $('.masonry__brick:nth-child(5)').css({
+                    'grid-column': '1',
+                    'max-width': '100%'
+                });
+            } else {
+                $('.masonry').css({
+                    'grid-template-columns': 'repeat(2, 1fr)',
+                    'gap': '2.5rem',
+                    'padding': '0 2rem'
+                });
+                // No special styling needed for 6 projects in 3x2 grid
+            }
+        });
+    });
+    </script>
+
+</body>
+
+</html>
