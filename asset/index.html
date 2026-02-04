@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asset Mapping - Interactive Bubble Chart</title>
+    <link rel="stylesheet" href="asset_bubble.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <h1>Asset Mapping - Interactive Bubble Diagram</h1>
+    <p class="subtitle">Click bubbles for details | Hover for quick info | Click legend to filter | Use buttons to show/hide categories</p>
+    
+    <div class="controls">
+        <button class="btn" onclick="filterCategory('SOCIAL ASSETS')">Social Assets</button>
+        <button class="btn" onclick="filterCategory('SPATIAL ASSETS')">Spatial Assets</button>
+        <button class="btn" onclick="filterCategory('ECONOMIC ASSETS')">Economic Assets</button>
+        <button class="btn" onclick="filterCategory('INSTITUTIONAL ASSETS')">Institutional Assets</button>
+        <button class="btn" onclick="showAll()">Show All</button>
+        <button class="btn" onclick="showHighlighted()">Show Highlighted Only</button>
+        <button class="btn" onclick="downloadPNG()" style="background-color: #95E1D3;">📥 Download PNG</button>
+    </div>
+    
+    <div id="chart"></div>
+    <div class="tooltip" id="tooltip"></div>
+
+    <script src="asset_bubble.js"></script>
+</body>
+</html>
