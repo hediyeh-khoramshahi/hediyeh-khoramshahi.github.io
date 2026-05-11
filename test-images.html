@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .image-test { margin: 20px 0; padding: 20px; border: 1px solid #ccc; }
+        .image-test img { max-width: 300px; height: auto; display: block; margin: 10px 0; }
+        .status { font-weight: bold; }
+        .success { color: green; }
+        .error { color: red; }
+    </style>
+</head>
+<body>
+    <h1>Portfolio Image Test</h1>
+    
+    <div class="image-test">
+        <h2>1. Chitgar Symphony</h2>
+        <img src="images/portfolio/chitgar-symphony.jpg" alt="Chitgar Symphony" onload="this.nextSibling.innerHTML='✅ LOADED'" onerror="this.nextSibling.innerHTML='❌ FAILED'">
+        <div class="status">Loading...</div>
+    </div>
+
+    <div class="image-test">
+        <h2>2. Pedestrian Serenade</h2>
+        <img src="images/portfolio/pedestrian-serenade.jpg" alt="Pedestrian Serenade" onload="this.nextSibling.innerHTML='✅ LOADED'" onerror="this.nextSibling.innerHTML='❌ FAILED'">
+        <div class="status">Loading...</div>
+    </div>
+
+    <div class="image-test">
+        <h2>3. Who Gets Green</h2>
+        <img src="images/portfolio/who-gets-green-1.jpg" alt="Who Gets Green" onload="this.nextSibling.innerHTML='✅ LOADED'" onerror="this.nextSibling.innerHTML='❌ FAILED'">
+        <div class="status">Loading...</div>
+    </div>
+
+    <div class="image-test">
+        <h2>4. River of Life</h2>
+        <img src="images/portfolio/River of life.jpg" alt="River of Life" onload="this.nextSibling.innerHTML='✅ LOADED'" onerror="this.nextSibling.innerHTML='❌ FAILED'">
+        <div class="status">Loading...</div>
+    </div>
+
+    <div class="image-test">
+        <h2>5. Neckar Nexus</h2>
+        <img src="images/portfolio/Neckar nexus.png" alt="Neckar Nexus" onload="this.nextSibling.innerHTML='✅ LOADED'" onerror="this.nextSibling.innerHTML='❌ FAILED'">
+        <div class="status">Loading...</div>
+    </div>
+
+    <div class="image-test">
+        <h2>6. It Takes a Village</h2>
+        <img src="images/portfolio/It Takes a Village to Raise a Child 1.jpg" alt="It Takes a Village" onload="this.nextSibling.innerHTML='✅ LOADED'" onerror="this.nextSibling.innerHTML='❌ FAILED'">
+        <div class="status">Loading...</div>
+    </div>
+
+    <div style="margin-top: 40px; padding: 20px; background: #f0f0f0;">
+        <h3>Instructions:</h3>
+        <p>1. If you see ✅ LOADED next to images, they are working correctly</p>
+        <p>2. If you see ❌ FAILED, there's an image loading issue</p>
+        <p>3. Go back to <a href="/">main portfolio page</a> to see the final result</p>
+    </div>
+</body>
+</html>
