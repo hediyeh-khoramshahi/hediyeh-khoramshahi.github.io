@@ -282,6 +282,122 @@
         .contact__infos p {
             text-align: justify !important;
         }
+
+        /* Research section color refinement */
+        .s-thesis {
+            color: #f4f0ea !important;
+        }
+
+        .s-thesis .section-intro h3 {
+            color: #f2c7c7 !important;
+        }
+
+        .s-thesis .section-intro h1,
+        .s-thesis h2,
+        .s-thesis h3 {
+            color: #ffffff !important;
+            text-shadow: none !important;
+        }
+
+        .s-thesis p {
+            color: #f0ece6 !important;
+        }
+
+        .s-thesis .section-intro.has-bottom-sep::after {
+            background-color: rgba(134, 33, 33, 0.28) !important;
+        }
+
+        .research-placeholder,
+        .keyword-box {
+            background: rgba(255, 255, 255, 0.08) !important;
+            color: #f0ece6 !important;
+            border: 1px solid rgba(255, 255, 255, 0.16) !important;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.16) !important;
+        }
+
+        .research-placeholder {
+            width: 100%;
+            max-width: 300px;
+            min-height: 380px;
+            margin: 0 auto 2rem;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .keyword-box {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+
+        /* Keep PhotoSwipe controls independent from global button styles */
+        .pswp .pswp__button {
+            background: url("images/photoswipe/default-skin.png") 0 0 no-repeat !important;
+            background-size: 264px 88px !important;
+            border-radius: 0 !important;
+            box-shadow: none !important;
+            transform: none !important;
+            pointer-events: auto !important;
+            z-index: 1700 !important;
+        }
+
+        .pswp .pswp__button:hover {
+            transform: none !important;
+            box-shadow: none !important;
+        }
+
+        .pswp .pswp__button--close {
+            background-position: 0 -44px !important;
+        }
+
+        .pswp .pswp__button--share {
+            background-position: -44px -44px !important;
+        }
+
+        .pswp .pswp__button--fs {
+            background-position: -44px 0 !important;
+        }
+
+        .pswp.pswp--fs .pswp__button--fs {
+            background-position: -44px -44px !important;
+        }
+
+        .pswp .pswp__button--zoom {
+            background-position: -88px 0 !important;
+        }
+
+        .pswp.pswp--zoomed-in .pswp__button--zoom {
+            background-position: -132px 0 !important;
+        }
+
+        .pswp .pswp__button--arrow--left,
+        .pswp .pswp__button--arrow--right {
+            background: none !important;
+            visibility: visible !important;
+            width: 54px !important;
+            height: 54px !important;
+            margin-top: -27px !important;
+        }
+
+        .pswp .pswp__button--arrow--left:before,
+        .pswp .pswp__button--arrow--right:before {
+            background-image: url("images/photoswipe/default-skin.png") !important;
+            background-size: 264px 88px !important;
+            background-color: rgba(0, 0, 0, 0.45) !important;
+            top: 12px !important;
+        }
+
+        .pswp .pswp__button--arrow--left:before {
+            background-position: -138px -44px !important;
+        }
+
+        .pswp .pswp__button--arrow--right:before {
+            background-position: -94px -44px !important;
+        }
     </style>
 
     <!-- script
@@ -613,7 +729,9 @@
 
             <div class="col-six tab-full left">
                 <div style="text-align: center;">
-                    <img src="images/portfolio/thesis-cover.jpg" alt="Stuttgart Superblock - Urban Experimentation Research" style="width: 100%; max-width: 300px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-bottom: 2rem;">
+                    <div class="research-placeholder">
+                        Thesis cover coming soon
+                    </div>
                 </div>
             </div>
 
@@ -630,7 +748,7 @@
 
                 <p>The findings speak directly to Smart City and Verwaltungsinnovation practice — how cities can build durable governance scaffolding around experimental urban formats and ensure that evidence-based pilots translate into sustained municipal policy.</p>
 
-                <div style="margin-top: 2rem; padding: 1.5rem; background: #f5f5f5; border-radius: 8px;">
+                <div class="keyword-box">
                     <p><strong>Keywords:</strong> <br>
                     Reallabore · Urban Experimentation · Municipal Governance · Verkehrsberuhigung · Verwaltungsinnovation · Stuttgart Superblock · Institutional Embedding · Governance Innovation</p>
                 </div>
@@ -673,9 +791,9 @@
                     <div class="item-folio">
 
                         <div class="item-folio__thumb">
-                            <a href="images/portfolio/gallery/g-vila-nova-de-gaia-cover.jpg" class="thumb-link" title="Vila Nova de Gaia" data-size="1050x700">
-                                <img src="images/portfolio/vila-nova-de-gaia-cover.jpg"
-                                     srcset="images/portfolio/vila-nova-de-gaia-cover.jpg 1x, images/portfolio/vila-nova-de-gaia-cover.jpg 2x" alt="Vila Nova de Gaia - Strategic Urban Plan and Community Hub">
+                            <a href="images/portfolio/It%20Takes%20a%20Village%20to%20Raise%20a%20Child%201.jpg" class="thumb-link" title="Vila Nova de Gaia" data-size="1600x900">
+                                <img src="images/portfolio/It%20Takes%20a%20Village%20to%20Raise%20a%20Child%201.jpg"
+                                     srcset="images/portfolio/It%20Takes%20a%20Village%20to%20Raise%20a%20Child%201.jpg 1x, images/portfolio/It%20Takes%20a%20Village%20to%20Raise%20a%20Child%202.jpg 2x" alt="Vila Nova de Gaia - Strategic Urban Plan and Community Hub">
                             </a>
                         </div>
 
@@ -705,17 +823,11 @@
 
                             <p><strong>Project Visualizations:</strong></p>
                             <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin: 20px 0;">
-                                <a href="images/portfolio/vila-nova-de-gaia-1.jpg" target="_blank">
-                                    <img src="images/portfolio/vila-nova-de-gaia-1.jpg" alt="Vila Nova de Gaia - Spatial Analysis" style="width: 100%; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+                                <a href="images/portfolio/It%20Takes%20a%20Village%20to%20Raise%20a%20Child%201.jpg" class="portfolio-lightbox" data-size="1600x900">
+                                    <img src="images/portfolio/It%20Takes%20a%20Village%20to%20Raise%20a%20Child%201.jpg" alt="Vila Nova de Gaia - Spatial Analysis" style="width: 100%; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
                                 </a>
-                                <a href="images/portfolio/vila-nova-de-gaia-2.jpg" target="_blank">
-                                    <img src="images/portfolio/vila-nova-de-gaia-2.jpg" alt="Vila Nova de Gaia - Strategic Plan" style="width: 100%; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
-                                </a>
-                                <a href="images/portfolio/vila-nova-de-gaia-3.jpg" target="_blank">
-                                    <img src="images/portfolio/vila-nova-de-gaia-3.jpg" alt="Vila Nova de Gaia - Community Hub Design" style="width: 100%; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
-                                </a>
-                                <a href="images/portfolio/vila-nova-de-gaia-4.jpg" target="_blank">
-                                    <img src="images/portfolio/vila-nova-de-gaia-4.jpg" alt="Vila Nova de Gaia - Governance Framework" style="width: 100%; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+                                <a href="images/portfolio/It%20Takes%20a%20Village%20to%20Raise%20a%20Child%202.jpg" class="portfolio-lightbox" data-size="4967x3508">
+                                    <img src="images/portfolio/It%20Takes%20a%20Village%20to%20Raise%20a%20Child%202.jpg" alt="Vila Nova de Gaia - Strategic Plan" style="width: 100%; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
                                 </a>
                             </div>
                         </div>
@@ -728,9 +840,9 @@
                     <div class="item-folio">
 
                         <div class="item-folio__thumb">
-                            <a href="images/portfolio/gallery/g-neckar-nexus-cover.jpg" class="thumb-link" title="Neckar Nexus" data-size="1050x700">
-                                <img src="images/portfolio/neckar-nexus-cover.jpg"
-                                     srcset="images/portfolio/neckar-nexus-cover.jpg 1x, images/portfolio/neckar-nexus-cover.jpg 2x" alt="Neckar Nexus - The Neckar as a Mediator">
+                            <a href="images/portfolio/Neckar%20nexus.png" class="thumb-link" title="Neckar Nexus" data-size="1386x1194">
+                                <img src="images/portfolio/Neckar%20nexus.png"
+                                     srcset="images/portfolio/Neckar%20nexus.png 1x, images/portfolio/Neckar%20nexus%202.png 2x" alt="Neckar Nexus - The Neckar as a Mediator">
                             </a>
                         </div>
 
@@ -762,17 +874,11 @@
 
                             <p><strong>Project Visualizations:</strong></p>
                             <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin: 20px 0;">
-                                <a href="images/portfolio/neckar-nexus-1.jpg" target="_blank">
-                                    <img src="images/portfolio/neckar-nexus-1.jpg" alt="Neckar Nexus - Community Mapping" style="width: 100%; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+                                <a href="images/portfolio/Neckar%20nexus.png" class="portfolio-lightbox" data-size="1386x1194">
+                                    <img src="images/portfolio/Neckar%20nexus.png" alt="Neckar Nexus - Community Mapping" style="width: 100%; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
                                 </a>
-                                <a href="images/portfolio/neckar-nexus-2.jpg" target="_blank">
-                                    <img src="images/portfolio/neckar-nexus-2.jpg" alt="Neckar Nexus - Strategic Framework" style="width: 100%; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
-                                </a>
-                                <a href="images/portfolio/neckar-nexus-3.jpg" target="_blank">
-                                    <img src="images/portfolio/neckar-nexus-3.jpg" alt="Neckar Nexus - Spatial Intervention" style="width: 100%; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
-                                </a>
-                                <a href="images/portfolio/neckar-nexus-4.jpg" target="_blank">
-                                    <img src="images/portfolio/neckar-nexus-4.jpg" alt="Neckar Nexus - Programming & Phasing" style="width: 100%; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+                                <a href="images/portfolio/Neckar%20nexus%202.png" class="portfolio-lightbox" data-size="2184x1476">
+                                    <img src="images/portfolio/Neckar%20nexus%202.png" alt="Neckar Nexus - Strategic Framework" style="width: 100%; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
                                 </a>
                             </div>
                         </div>
@@ -785,9 +891,9 @@
                     <div class="item-folio">
 
                         <div class="item-folio__thumb">
-                            <a href="images/portfolio/gallery/g-who-gets-the-green-cover.jpg" class="thumb-link" title="Who Gets the Green?" data-size="1050x700">
-                                <img src="images/portfolio/who-gets-the-green-cover.jpg"
-                                     srcset="images/portfolio/who-gets-the-green-cover.jpg 1x, images/portfolio/who-gets-the-green-cover.jpg 2x" alt="Who Gets the Green? - Spatial Inequality and Green Space Access">
+                            <a href="images/portfolio/who-gets-green-1.jpg" class="thumb-link" title="Who Gets the Green?" data-size="2048x1448">
+                                <img src="images/portfolio/who-gets-green-1.jpg"
+                                     srcset="images/portfolio/who-gets-green-1.jpg 1x, images/portfolio/who-gets-green-2.jpg 2x" alt="Who Gets the Green? - Spatial Inequality and Green Space Access">
                             </a>
                         </div>
 
@@ -819,17 +925,17 @@
 
                             <p><strong>Research Visualizations:</strong></p>
                             <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin: 20px 0;">
-                                <a href="images/portfolio/who-gets-the-green-1.jpg" target="_blank">
-                                    <img src="images/portfolio/who-gets-the-green-1.jpg" alt="Who Gets the Green? - IMD Mapping" style="width: 100%; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+                                <a href="images/portfolio/who-gets-green-1.jpg" class="portfolio-lightbox" data-size="2048x1448">
+                                    <img src="images/portfolio/who-gets-green-1.jpg" alt="Who Gets the Green? - IMD Mapping" style="width: 100%; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
                                 </a>
-                                <a href="images/portfolio/who-gets-the-green-2.jpg" target="_blank">
-                                    <img src="images/portfolio/who-gets-the-green-2.jpg" alt="Who Gets the Green? - Green Space Distribution" style="width: 100%; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+                                <a href="images/portfolio/who-gets-green-2.jpg" class="portfolio-lightbox" data-size="2480x1886">
+                                    <img src="images/portfolio/who-gets-green-2.jpg" alt="Who Gets the Green? - Green Space Distribution" style="width: 100%; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
                                 </a>
-                                <a href="images/portfolio/who-gets-the-green-3.jpg" target="_blank">
-                                    <img src="images/portfolio/who-gets-the-green-3.jpg" alt="Who Gets the Green? - Overlap Analysis" style="width: 100%; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+                                <a href="images/portfolio/who-gets-green-3.jpg" class="portfolio-lightbox" data-size="2480x1886">
+                                    <img src="images/portfolio/who-gets-green-3.jpg" alt="Who Gets the Green? - Overlap Analysis" style="width: 100%; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
                                 </a>
-                                <a href="images/portfolio/who-gets-the-green-4.jpg" target="_blank">
-                                    <img src="images/portfolio/who-gets-the-green-4.jpg" alt="Who Gets the Green? - 3-30-300 Rule Assessment" style="width: 100%; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+                                <a href="images/portfolio/who-gets-green-4.jpg" class="portfolio-lightbox" data-size="2480x1886">
+                                    <img src="images/portfolio/who-gets-green-4.jpg" alt="Who Gets the Green? - 3-30-300 Rule Assessment" style="width: 100%; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
                                 </a>
                             </div>
                         </div>
@@ -842,9 +948,9 @@
                     <div class="item-folio">
 
                         <div class="item-folio__thumb">
-                            <a href="images/portfolio/gallery/g-grijo-em-comum-cover.jpg" class="thumb-link" title="Grijo em Comum" data-size="1050x700">
-                                <img src="images/portfolio/grijo-em-comum-cover.jpg"
-                                     srcset="images/portfolio/grijo-em-comum-cover.jpg 1x, images/portfolio/grijo-em-comum-cover.jpg 2x" alt="Grijo em Comum - From Coexistence to Cohesion">
+                            <a href="images/portfolio/It%20Takes%20a%20Village%20to%20Raise%20a%20Child%202.jpg" class="thumb-link" title="Grijo em Comum" data-size="4967x3508">
+                                <img src="images/portfolio/It%20Takes%20a%20Village%20to%20Raise%20a%20Child%202.jpg"
+                                     srcset="images/portfolio/It%20Takes%20a%20Village%20to%20Raise%20a%20Child%202.jpg 1x, images/portfolio/It%20Takes%20a%20Village%20to%20Raise%20a%20Child%201.jpg 2x" alt="Grijo em Comum - From Coexistence to Cohesion">
                             </a>
                         </div>
 
@@ -876,17 +982,11 @@
 
                             <p><strong>Project Visualizations:</strong></p>
                             <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin: 20px 0;">
-                                <a href="images/portfolio/grijo-em-comum-1.jpg" target="_blank">
-                                    <img src="images/portfolio/grijo-em-comum-1.jpg" alt="Grijo em Comum - Community Mapping" style="width: 100%; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+                                <a href="images/portfolio/It%20Takes%20a%20Village%20to%20Raise%20a%20Child%202.jpg" class="portfolio-lightbox" data-size="4967x3508">
+                                    <img src="images/portfolio/It%20Takes%20a%20Village%20to%20Raise%20a%20Child%202.jpg" alt="Grijo em Comum - Community Mapping" style="width: 100%; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
                                 </a>
-                                <a href="images/portfolio/grijo-em-comum-2.jpg" target="_blank">
-                                    <img src="images/portfolio/grijo-em-comum-2.jpg" alt="Grijo em Comum - Social Analysis" style="width: 100%; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
-                                </a>
-                                <a href="images/portfolio/grijo-em-comum-3.jpg" target="_blank">
-                                    <img src="images/portfolio/grijo-em-comum-3.jpg" alt="Grijo em Comum - Spatial Intervention" style="width: 100%; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
-                                </a>
-                                <a href="images/portfolio/grijo-em-comum-4.jpg" target="_blank">
-                                    <img src="images/portfolio/grijo-em-comum-4.jpg" alt="Grijo em Comum - Implementation Strategy" style="width: 100%; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+                                <a href="images/portfolio/It%20Takes%20a%20Village%20to%20Raise%20a%20Child%201.jpg" class="portfolio-lightbox" data-size="1600x900">
+                                    <img src="images/portfolio/It%20Takes%20a%20Village%20to%20Raise%20a%20Child%201.jpg" alt="Grijo em Comum - Social Analysis" style="width: 100%; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
                                 </a>
                             </div>
                         </div>

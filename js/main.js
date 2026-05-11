@@ -147,52 +147,88 @@
     /* photoswipe
      * ----------------------------------------------------- */
     var ssPhotoswipe = function() {
-        var items = [],
+        var activeLightBox = null,
             $pswp = $('.pswp')[0],
             $folioItems = $('.item-folio');
 
             // get items
-            $folioItems.each( function(i) {
+            $folioItems.each( function() {
 
                 var $folio = $(this),
                     $thumbLink =  $folio.find('.thumb-link'),
+                    $galleryLinks = $folio.find('.item-folio__caption a.portfolio-lightbox'),
                     $title = $folio.find('.item-folio__title'),
                     $caption = $folio.find('.item-folio__caption'),
                     $titleText = '<h4>' + $.trim($title.html()) + '</h4>',
-                    $captionText = $.trim($caption.html()),
-                    $href = $thumbLink.attr('href'),
-                    $size = $thumbLink.data('size').split('x'),
-                    $width  = $size[0],
-                    $height = $size[1];
-         
-                var item = {
-                    src  : $href,
-                    w    : $width,
-                    h    : $height
-                }
+                    $captionText = '',
+                    items = [],
+                    itemIndexByHref = {},
+                    $links = $thumbLink.add($galleryLinks);
 
                 if ($caption.length > 0) {
-                    item.title = $.trim($titleText + $captionText);
+                    var $cleanCaption = $caption.clone();
+
+                    $cleanCaption.find('a.portfolio-lightbox').closest('div').prev('p').remove();
+                    $cleanCaption.find('a.portfolio-lightbox').closest('div').remove();
+                    $captionText = $.trim($cleanCaption.html());
                 }
 
-                items.push(item);
+                $links.each(function(linkIndex) {
+                    var $link = $(this),
+                        href = $link.attr('href'),
+                        size = ($link.data('size') || '1050x700').split('x'),
+                        imageAlt = $.trim($link.find('img').attr('alt') || $title.text()),
+                        item = {
+                            src: href,
+                            w: size[0],
+                            h: size[1],
+                            title: $.trim($titleText + $captionText + '<p><em>' + imageAlt + '</em></p>')
+                        };
+
+                    if (typeof itemIndexByHref[href] !== 'undefined') {
+                        $link.attr('data-pswp-index', itemIndexByHref[href]);
+                        return;
+                    }
+
+                    itemIndexByHref[href] = items.length;
+                    $link.attr('data-pswp-index', items.length);
+                    items.push(item);
+                });
+
+                $folio.data('pswp-items', items);
             });
 
             // bind click event
-            $folioItems.each(function(i) {
+            $folioItems.each(function() {
 
                 $(this).on('click', function(e) {
                     e.preventDefault();
+                    var items = $(this).data('pswp-items') || [],
+                        clickedIndex = $(e.target).closest('[data-pswp-index]').data('pswp-index'),
+                        startIndex = typeof clickedIndex !== 'undefined' ? clickedIndex : 0;
+
+                    if (!items.length) return;
+
                     var options = {
-                        index: i,
+                        index: startIndex,
                         showHideOpacity: true
                     }
 
                     // initialize PhotoSwipe
-                    var lightBox = new PhotoSwipe($pswp, PhotoSwipeUI_Default, items, options);
-                    lightBox.init();
+                    activeLightBox = new PhotoSwipe($pswp, PhotoSwipeUI_Default, items, options);
+                    activeLightBox.init();
                 });
 
+            });
+
+            $($pswp).on('click', 'a.portfolio-lightbox', function(e) {
+                var index = $(this).data('pswp-index');
+
+                if (activeLightBox && typeof index !== 'undefined') {
+                    e.preventDefault();
+                    activeLightBox.goTo(index);
+                    return false;
+                }
             });
 
     };
